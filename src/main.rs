@@ -3,7 +3,18 @@ use std::{fs};
 use mlua::{Lua, prelude::LuaResult};
 
 fn dynamic_routing_lua(route: &str) -> HttpResponse {
-    let lua = Lua::new();
+    // Get LuaRocks paths
+    let lua_path = std::env::var("LUA_PATH").unwrap_or_default();
+    let lua_cpath = std::env::var("LUA_CPATH").unwrap_or_default();
+    
+    let lua = unsafe { Lua::unsafe_new() };
+    lua.load(&format!(
+        r#"
+        package.path = package.path .. ";{}"
+        package.cpath = package.cpath .. ";{}"
+        "#,
+        lua_path, lua_cpath
+    )).exec();
     let file_name = if route.is_empty() { String::from("index") } else { String::from(route) };
     if let Ok(script_content) = fs::read_to_string(format!("logic/{}.lua", &file_name)) {
         let lua_output =  match lua.load(script_content).eval::<_>() {
