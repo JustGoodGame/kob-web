@@ -31,11 +31,11 @@ return hello .. "my name is" .. name .. "today it is: " .. os.time()
 ```
 
 ## TODO List
-[]Pass type of request onto onto the Lua VM (GET, POST, PUT...).
-[]Pass params and header-type of the request to the Lua VM, and allow Lua VM to modify the response headers.
-[]Add template rendering.
-[]Add static folder's functionality.
-[]Add config/server.toml functionality. 
+- [ ] Pass minimal request info onto the Lua VM (Request method: "GET, POST, PUT...", clientip, url).
+- [ ] Pass params and header-type of the request to the Lua VM, and allow Lua VM to modify the response headers.
+- [ ] Add support to a template engine (maybe Jinja2).
+- [ ] Add static folder's functionality.
+- [ ] Add config/server.toml functionality. 
 
 ## How to compile
 ### Linux:
