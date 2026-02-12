@@ -62,8 +62,8 @@ async fn index(req: HttpRequest) -> impl Responder {
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    println!("Kob-web: v1.2\n");
-    println!("Added passing minimal request info into the Lua VM, under the table 'request.'");
+    println!("Kob-web --version: v1.2");
+    println!("Added passing minimal request info into the Lua VM, under the table 'request.\n'");
 
    if let Ok(routes) = fs::read_dir("logic") {
     println!("Available routes:");
