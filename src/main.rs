@@ -1,5 +1,4 @@
 use actix_web::{App, HttpRequest, HttpResponse, HttpServer, Responder, get, web::{self}};
-use serde::Deserialize;
 use std::{fs};
 use mlua::{Lua, prelude::LuaResult};
 use std::collections::HashMap;
@@ -63,6 +62,8 @@ async fn index(req: HttpRequest) -> impl Responder {
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
+    println!("Kob-web: v1.2\n");
+    println!("Added passing minimal request info into the Lua VM, under the table 'request.'");
 
    if let Ok(routes) = fs::read_dir("logic") {
     println!("Available routes:");
@@ -71,7 +72,6 @@ async fn main() -> std::io::Result<()> {
             println!("-> : {}", name);
         }
     }
-    println!("Wasted time on this shit and it is just for debugging ffs.\n")
    }
     //println!("Routes detected: {:?}", entries);
     let address = "127.0.0.1";

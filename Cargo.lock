@@ -3,17 +3,6 @@
 version = 4
 
 [[package]]
-name = "KobwebREVAMP"
-version = "0.1.0"
-dependencies = [
- "actix-web",
- "env_logger",
- "io",
- "log",
- "mlua",
-]
-
-[[package]]
 name = "actix-codec"
 version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1255,6 +1244,17 @@ checksum = "9afb3de4395d6b3e67a780b6de64b51c978ecf11cb9a462c66be7d4ca9039d33"
 dependencies = [
  "getrandom",
  "libc",
+]
+
+[[package]]
+name = "kob-web"
+version = "0.1.0"
+dependencies = [
+ "actix-web",
+ "env_logger",
+ "io",
+ "log",
+ "mlua",
 ]
 
 [[package]]

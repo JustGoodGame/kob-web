@@ -37,17 +37,41 @@ return hello .. "my name is" .. name .. "today it is: " .. os.time()
 - [ ] Add static folder's functionality.
 - [ ] Add config/server.toml functionality. 
 
-## How to compile
+## How to build from source
 ### Linux:
+(Arch linux)
+Install lua:
+```bash
+pacman -S lua
+```
+
 Install cargo
+```bash
+pacman -S rustup
+rustup install stable
+rustup default stable
+```
 
 Clone the repo
+```sh
+git clone https://github.com/zauceee/kob-web.git
+```
 
-Go inside the folders.
+Go inside the kob-web folder.
+```sh
+cd kob-web
+```
 
 And run 
 ```sh
-cargo run
+cargo build --release
 ```
+
+The binary will be inside
+```sh
+cd ./target/release/
+./kob-web
+```
+
 ### Windows:
 Same stuff :P.
