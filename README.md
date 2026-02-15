@@ -30,15 +30,6 @@ return hello .. "my name is" .. name .. "today it is: " .. os.time()
 
 ```
 
-## TODO List
-- [x] Pass minimal request info onto the Lua VM (Request method: "GET, POST, PUT...", clientip, url).
-- [x] Add config/server.toml functionality. 
-- [x] Pass path parameters and query parameters to the Lua VM
-- [ ] Pass Header-type of the request to the Lua VM, and allow Lua VM to modify the response headers.
-
-- [ ] Add support to a template engine (maybe Jinja2).
-- [ ] Add static folder's functionality.
-
 ## What's new?
 
 <details>
@@ -93,6 +84,15 @@ return "User ID: " .. (query_params.id or "none")
 Query parameters are available in all routes automatically, no configuration needed!
 
 </details>
+
+## TODO List
+- [x] Pass minimal request info onto the Lua VM (Request method: "GET, POST, PUT...", clientip, url).
+- [x] Add config/server.toml functionality. 
+- [x] Pass path parameters and query parameters to the Lua VM
+- [ ] Pass Header-type of the request to the Lua VM, and allow Lua VM to modify the response headers.
+
+- [ ] Add support to a template engine (maybe Jinja2).
+- [ ] Add static folder's functionality.
 
 ## How to build from source
 ### Linux:
