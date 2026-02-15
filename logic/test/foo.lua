@@ -1,0 +1,1 @@
+return "Foo! Path params:" .. table.concat(path_params, ", ")

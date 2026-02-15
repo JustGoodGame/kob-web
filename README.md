@@ -35,7 +35,7 @@ return hello .. "my name is" .. name .. "today it is: " .. os.time()
 - [ ] Pass params and header-type of the request to the Lua VM, and allow Lua VM to modify the response headers.
 - [ ] Add support to a template engine (maybe Jinja2).
 - [ ] Add static folder's functionality.
-- [ ] Add config/server.toml functionality. 
+- [x] Add config/server.toml functionality. 
 
 ## How to build from source
 ### Linux:

@@ -1,0 +1,9 @@
+# Hello! Im server.toml! Im responsible for most of the server's configuration!
+[socket]
+# Here you can set the ip address and the port the server will be hosted on!
+address="0.0.0.0"
+port=8080
+
+[routing]
+# Here you'll write which routes will be able to accept path parameters through allow_path_params!
+allow_path_params = ["/", "/test/*"]

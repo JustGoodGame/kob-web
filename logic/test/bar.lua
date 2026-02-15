@@ -1,0 +1,1 @@
+return "Bar! Path params:" .. table.concat(path_params, ", ")
